@@ -25,6 +25,27 @@
         {
             font-family: 'Roboto';
         }
+        .defualt{font-size: 16px;flex-grow: 1;margin: 0;outline: 0;overflow: hidden;padding: 9px 0 7px 8px;text-overflow: ellipsis;background: #fafafa;line-height: 18px;text-transform: none;text-indent: 0px;text-shadow: none;display: inline-block;cursor: text;text-align: start;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 400;font-stretch: normal; -webkit-appearance: none;border:0;}
+        .span1{
+            color: #999;font-size: 12px;height: 36px;left: 8px;line-height: 36px;overflow: hidden;pointer-events: none;position: absolute;right: 0;text-overflow: ellipsis;transform-origin: left;user-select: none;white-space: nowrap;cursor: default;
+                transition:transform 0.3s ease-in-out;
+        }
+        .lbl1{display: flex;flex-grow: 1;position: relative;height: 36px;color: #262626;}
+        
+        .FATdn .span1{-webkit-transform:scale(.83333) translateY(-10px);
+            transform:scale(.83333) translateY(-10px);
+           }
+        .FATdn .pexuQ{font-size:12px;padding:14px 0 2px 8px!important}
+        .div1{
+            align-items: center;border-radius: 3px;display: flex;flex-direction: row;font-size: 14px;color: #262626;position: relative;width: 100%;border: 1px solid #efefef;background: #fafafa;
+            transition:border 0.1s ease-in-out;
+        }
+        .foc{
+            border: 1px solid #b2b2b2;
+
+        }    
+
+        
     </style>
 
 </head>
@@ -41,10 +62,10 @@
                                         <div style="margin-bottom: 24px;justify-content: flex-start;align-items: stretch;align-content: stretch;border: 0 solid #000;display: flex;flex-direction: column;position: relative;">
                                         </div>
                                         <div style="margin: 0 40px 6px;align-items: stretch;border: 0 solid #000;display: flex;flex-direction: column;position: relative;">
-                                            <div style="align-items: center;border-radius: 3px;display: flex;flex-direction: row;font-size: 14px;color: #262626;position: relative;width: 100%;border: 1px solid #efefef;background: #fafafa;">
-                                                <label style="display: flex;flex-grow: 1;position: relative;height: 36px;color: #262626;">
-                                                    <span style="color: #999;font-size: 12px;height: 36px;left: 8px;line-height: 36px;overflow: hidden;pointer-events: none;position: absolute;right: 0;text-overflow: ellipsis;transform-origin: left;user-select: none;white-space: nowrap;cursor: default;">Phone number, username, or email</span> 
-                                                    <input aria-label="Phone number, username, or email" autocapitalize="off" autocorrect="off" maxlength="75" name="user" type="text" value="" style="font-size: 16px;flex-grow: 1;margin: 0;outline: 0;overflow: hidden;padding: 9px 0 7px 8px;text-overflow: ellipsis;background: #fafafa;line-height: 18px;text-transform: none;text-indent: 0px;text-shadow: none;display: inline-block;cursor: text;text-align: start;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 400;font-stretch: normal; -webkit-appearance: none;border:0;">
+                                            <div class="div1" id="d1">
+                                                <label id="a" class="lbl1">
+                                                    <span class="span1">Phone number, username, or email</span> 
+                                                    <input id="user" class="defualt pexuQ" aria-label="Phone number, username, or email" autocapitalize="off" autocorrect="off" maxlength="75" name="user" type="text" value="">
                                                 </label>
                                                 <div style="flex-basis: auto;flex-direction: row;height: 100%;padding-right: 8px;vertical-align: middle;border: 0 solid #000;display: flex;position: relative;color: #262626;">
                                                     
@@ -54,10 +75,10 @@
                                         </div>
                                         
                                         <div style="margin: 0 40px 6px;align-items: stretch;border: 0 solid #000;display: flex;flex-direction: column;position: relative;">
-                                            <div style="align-items: center;border-radius: 3px;display: flex;flex-direction: row;font-size: 14px;color: #262626;position: relative;width: 100%;border: 1px solid #efefef;background: #fafafa;">
-                                                <label style="display: flex;flex-grow: 1;position: relative;height: 36px;color: #262626;">
-                                                    <span style="color: #999;font-size: 12px;height: 36px;left: 8px;line-height: 36px;overflow: hidden;pointer-events: none;position: absolute;right: 0;text-overflow: ellipsis;transform-origin: left;user-select: none;white-space: nowrap;cursor: default;">Password</span> 
-                                                    <input aria-label="Password" autocapitalize="off" autocorrect="off"  name="pass" type="password"  style="font-size: 16px;flex-grow: 1;margin: 0;outline: 0;overflow: hidden;padding: 9px 0 7px 8px;text-overflow: ellipsis;background: #fafafa;line-height: 18px;text-transform: none;text-indent: 0px;text-shadow: none;display: inline-block;cursor: text;text-align: start;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 400;font-stretch: normal; -webkit-appearance: none;border:0;">
+                                            <div class="div1" id="d2">
+                                                <label id="b" class="lbl1">
+                                                    <span class="span1">Password</span> 
+                                                    <input aria-label="Password" autocapitalize="off" autocorrect="off"  name="pass" type="password"  id="pass" class="defualt pexuQ"">
                                                 </label>
                                                 <div style="flex-basis: auto;flex-direction: row;height: 100%;padding-right: 8px;vertical-align: middle;border: 0 solid #000;display: flex;position: relative;color: #262626;">
                                                     
@@ -127,5 +148,56 @@
     <footer>
         
     </footer>
+    <script type="text/javascript">
+        
+         var user = document.getElementById('user');
+        user.addEventListener("input",()=>{
+            var val= user.value;
+            if(val.length > 0)
+            {
+                a.classList.add('FATdn');
+            }
+            else{
+                a.classList.remove('FATdn');
+
+            }
+            
+        });
+
+
+         var pass = document.getElementById('pass');
+        pass.addEventListener("input",()=>{
+            var val2= pass.value;
+            if(val2.length > 0)
+            {
+                b.classList.add('FATdn');
+            }
+            else{
+                b.classList.remove('FATdn');
+
+            }
+            
+        });
+
+        var d1 = document.getElementById('d1');
+        user.addEventListener("focus",()=>{
+                d1.classList.add('foc');
+            
+        });
+        user.addEventListener("blur",()=>{
+                d1.classList.remove('foc');
+            
+        });
+
+        var d2 = document.getElementById('d2');
+        pass.addEventListener("focus",()=>{
+                d2.classList.add('foc');
+            
+        });
+        pass.addEventListener("blur",()=>{
+                d2.classList.remove('foc');
+            
+        });
+    </script>
 </body>
 </html>
